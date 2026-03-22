@@ -9,7 +9,7 @@ export default function Header({selectedMode, pbTimed = 0, pbPassage = 0}) {
 
         <div>
             <img src="/assets/images/icon-personal-best.svg" alt="pb" />
-            <h4 id='pb'>Best: <span className='score-related'>
+            <h4 id='pb'><span id="pp">Personal Best: </span><span id="xx">Best: </span> <span className='score-related'>
             {
                 selectedMode === "timed" ? pbTimed : pbPassage
             }    

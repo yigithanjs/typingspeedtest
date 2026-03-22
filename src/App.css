@@ -370,6 +370,10 @@ article label{
     align-items: center;
   }
 
+  #pp{
+    display: none;
+  }
+
   .head h3{
     color: #fafafa;
     font-size: 25px;
@@ -454,6 +458,19 @@ article label{
   }
 
 @media (min-width: 768px) {
+  #pp{
+    display: flex;
+    margin-right: 10gipx;
+  }
+
+  #pb{
+    display: flex;
+  }
+
+  #xx{
+    display: none;
+  }
+
   header{
     padding: 20px 40px;
   }
