@@ -375,6 +375,23 @@ article label{
     font-size: 25px;
   }
 
+  #star1{
+    position: absolute;
+    right: 40px;
+    bottom: 200px;
+  }
+
+  #star2{
+    position: absolute;
+    left: 40px;
+    top: 200px;
+  }
+
+  #confetti{
+    position: absolute;
+    bottom: 0;
+  }
+
   .foot div{
     width: 80vw;
     height: 100px;

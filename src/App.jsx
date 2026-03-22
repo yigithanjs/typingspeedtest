@@ -361,8 +361,18 @@ function App() {
     {(wpm || passageWPM) && !isRunning ? (
       <section id='end'>
         <div className='endDiv head'>
-          <span className='outerEffect'>
-            <span className='outEffect'>
+          {currentSituation !== "pb" &&
+            <>
+              <img src="assets/images/pattern-star-1.svg" alt="s" id='star1'/>
+              <img src="assets/images/pattern-star-2.svg" alt="s" id='star2'/>
+            </>
+          }
+          {currentSituation === "pb" && 
+              <img src="assets/images/pattern-confetti.svg" alt="s" id='confetti'/>
+          }
+
+          <span className={currentSituation === "pb" ? "" : "outerEffect"}>
+            <span className={currentSituation === "pb" ? "" : "outEffect"}>
               <img src={resultScenario.src} alt="completed" />
             </span>
           </span>
