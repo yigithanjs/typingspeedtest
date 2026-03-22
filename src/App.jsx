@@ -49,6 +49,15 @@ function App() {
     startTimer()
   }
 
+  function handleTypingAreaClick() {
+    if (isRunning) {
+      textareaRef.current?.focus()
+      return
+    }
+
+    startTimer()
+  }
+
   {/* **************** */}
     const [passageTimer, setPassageTimer] = useState(0)
     
@@ -419,16 +428,16 @@ function App() {
 
     <section id='container-bb'>
       <div>
-        {/* Top div is for the blurry page */}
+       {/* Top div is for the blurry page */}
        {!isRunning ? (
-         <div className='blurryDiv'>
+         <div className='blurryDiv' onClick={handleTypingAreaClick}>
            <button onClick={startTimer}>Start Typing Test</button>
            <p>Or click the text and start typing</p>
          </div>
        ) : null}
 
         {/* Bottom div is for the input field and the text features */}
-        <div className='txtDiv'>
+        <div className='txtDiv' onClick={handleTypingAreaClick}>
 
           {/* userInput.length === easySplittedText.length && userAt < easyTexts.length - 1 ? userAt++ : null */}
          
